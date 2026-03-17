@@ -72,7 +72,7 @@
 
       <div class="absolute-bottom q-pa-md text-center bg-blue-grey-1 profile-section">
         <q-avatar size="50px" class="q-mb-xs shadow-2 profile-avatar-border">
-          <img src="../../public/icons/FotoPerfil.jpeg">
+          <img src="/FotoPerfil.jpeg">
         </q-avatar>
         <div class="text-caption text-weight-bold text-navy">Kayllane</div>
         <div class="text-caption" style="font-size: 10px;">Acadêmica de Enfermagem</div>

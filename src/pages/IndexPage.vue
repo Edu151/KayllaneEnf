@@ -3,7 +3,7 @@
     <div class="row justify-center q-mb-xl">
       <div class="col-12 col-md-8 text-center">
         <q-avatar size="220px" class="">
-          <img src="../../public/icons/FotoPerfil.jpeg">
+          <img src="/FotoPerfil.jpeg">
         </q-avatar>
         <h1 class="text-h3 text-navy text-weight-bolder q-mb-xs">Kayllane</h1>
         <div class="text-h5 text-red-med text-weight-medium q-mb-sm">Enfermagem em Foco</div>
