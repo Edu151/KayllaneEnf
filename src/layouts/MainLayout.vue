@@ -18,6 +18,7 @@
 
         <div class="gt-sm q-gutter-sm">
           <q-btn flat label="Início" icon="home" to="/" />
+          <q-btn flat label="Glasgow" icon="psychology" to="/glasgow" />
           <q-btn unelevated class="bg-red-med" label="Calculadora" icon="calculate" to="/calculos" />
           <q-btn flat round icon="link" href="https://linkedin.com" target="_blank">
             <q-tooltip>LinkedIn</q-tooltip>
@@ -37,7 +38,7 @@
           Menu de Navegação
         </q-item-label>
 
-        <q-item clickable v-ripple to="/" exact active-class="text-red-med">
+        <q-item clickable v-ripple to="/" exact active-class="active-item-red">
           <q-item-section avatar>
             <q-icon name="home" color="navy" />
           </q-item-section>
@@ -47,9 +48,40 @@
           </q-item-section>
         </q-item>
 
-        <q-item clickable v-ripple to="/calculos" class="bg-navy-light text-navy">
+        <q-item clickable v-ripple to="/checklist" active-class="active-item-navy">
           <q-item-section avatar>
-            <q-icon name="calculate" />
+            <q-icon name="fact_check" color="navy" />
+          </q-item-section>
+          <q-item-section>
+            <q-item-label class="text-weight-bold">Checklist de Estágio</q-item-label>
+            <q-item-label caption>Organize seus materiais</q-item-label>
+          </q-item-section>
+        </q-item>
+
+        <q-item clickable v-ripple to="/glasgow" active-class="active-item-navy">
+          <q-item-section avatar>
+            <q-icon name="psychology" color="navy" />
+          </q-item-section>
+          <q-item-section>
+            <q-item-label class="text-weight-bold">Escala de Glasgow</q-item-label>
+            <q-item-label caption>Avaliação neurológica</q-item-label>
+          </q-item-section>
+        </q-item>
+
+        <q-item clickable v-ripple to="/glossario" active-class="active-item-navy">
+          <q-item-section avatar>
+            <q-icon name="menu_book" color="navy" />
+          </q-item-section>
+          <q-item-section>
+            <q-item-label class="text-weight-bold">Glossário Técnico</q-item-label>
+            <q-item-label caption>Terminologias de A a Z</q-item-label>
+          </q-item-section>
+        </q-item>
+
+
+        <q-item clickable v-ripple to="/calculos" active-class="active-item-navy">
+          <q-item-section avatar>
+            <q-icon name="calculate" color="navy" />
           </q-item-section>
           <q-item-section>
             <q-item-label class="text-weight-bold">Cálculo de Medicamentos</q-item-label>
@@ -105,41 +137,26 @@ function toggleLeftDrawer () {
 /* VARIÁVEIS DE CORES */
 .text-navy { color: #001F3F !important; }
 .bg-navy { background-color: #001F3F !important; }
-.bg-navy-light { background-color: rgba(0, 31, 63, 0.1) !important; }
 .bg-red-med { background-color: #C62828 !important; }
 
+/* Estilos para itens ativos no menu */
+.active-item-navy {
+  background-color: rgba(0, 31, 63, 0.1);
+  color: #001F3F;
+  border-right: 4px solid #001F3F;
+}
+.active-item-red {
+  color: #C62828;
+}
+
 /* BORDAS CUSTOMIZADAS EM #001F3F */
+.custom-header-border { border-bottom: 3px solid #001F3F !important; }
+.custom-drawer-border { border-right: 2px solid #001F3F !important; }
+.profile-section { border-top: 2px solid #001F3F; }
+.profile-avatar-border { border: 2px solid #001F3F; }
+.custom-footer-border { border-top: 4px solid #001F3F !important; }
 
-/* Borda inferior do Header */
-.custom-header-border {
-  border-bottom: 3px solid #001F3F !important;
-}
-
-/* Borda lateral do Drawer */
-.custom-drawer-border {
-  border-right: 2px solid #001F3F !important;
-}
-
-/* Borda superior do rodapé do Drawer (onde fica a foto) */
-.profile-section {
-  border-top: 2px solid #001F3F;
-}
-
-/* Borda na própria foto de perfil */
-.profile-avatar-border {
-  border: 2px solid #001F3F;
-}
-
-/* Borda superior do Footer principal */
-.custom-footer-border {
-  border-top: 4px solid #001F3F !important;
-}
-
-/* Efeito de transição suave */
-.fade-enter-active, .fade-leave-active {
-  transition: opacity 0.3s ease;
-}
-.fade-enter-from, .fade-leave-to {
-  opacity: 0;
-}
+/* Transição */
+.fade-enter-active, .fade-leave-active { transition: opacity 0.3s ease; }
+.fade-enter-from, .fade-leave-to { opacity: 0; }
 </style>
