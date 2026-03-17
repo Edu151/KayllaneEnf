@@ -18,6 +18,7 @@
 
         <div class="gt-sm q-gutter-sm">
           <q-btn flat label="Início" icon="home" to="/" />
+          <q-btn flat label="CheckList" icon="check" to="/CheckList" />
           <q-btn flat label="Glasgow" icon="psychology" to="/glasgow" />
           <q-btn unelevated class="bg-red-med" label="Calculadora" icon="calculate" to="/calculos" />
           <q-btn flat round icon="link" href="https://linkedin.com" target="_blank">
